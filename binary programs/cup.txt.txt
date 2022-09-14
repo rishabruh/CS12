@@ -1,0 +1,5 @@
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+these are all the alphabets in the english language
+including consonants and vowels kept in a txt file
+the sentences written are also going to be checked for vowels
+and the entirety is going to be displayed as text during execution

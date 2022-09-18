@@ -3,20 +3,6 @@ r=-1
 f=-1
 n=len(queue)
 
-def main():
-    op=int(input('>  '))
-    if op==0:
-        exit()
-    elif op==1:
-        push()
-        main()
-    elif op==2:
-        pop()
-        main()
-    elif op==3:
-        help_menu()
-        main()
-
 def help_menu():
     print('''What operation would you like to perform?
 [0] Quit
@@ -47,6 +33,17 @@ def pop():
         queue.pop(f)
         r=r-1
         print(queue)
+        
+while True:
+    op=int(input('>  '))
+    if op==0:
+        exit()
+    elif op==1:
+        push()
+    elif op==2:
+        pop()
+    elif op==3:
+        help_menu()
+
 
 help_menu()
-main()

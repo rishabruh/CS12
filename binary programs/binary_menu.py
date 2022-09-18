@@ -1,41 +1,5 @@
 import pickle
 
-
-def main():
-    prog = int(
-        input(
-            """Which program would you like to run?
-    1 - Create New File
-    2 - Write to file
-    3 - Read
-    4 - Search
-    5 - Insert TODO
-    6 - Modify
-    Enter choice[1-5][0 to quit]:"""
-        )
-    )
-    if prog == 0:
-        exit()
-    elif prog == 1:
-        binaryNew()
-        main()
-    elif prog == 2:
-        binaryWrite()
-        main()
-    elif prog == 3:
-        binaryRead()
-        main()
-    elif prog == 4:
-        binarySearch()
-        main()
-    elif prog == 5:
-        binaryInsert()
-        main()
-    elif prog == 6:
-        binaryModify()
-        main()
-
-
 # Defining all functions
 def binaryWrite():
     student = {}
@@ -127,7 +91,30 @@ def binaryInsert():
         for i in templist:
             pickle.dump(i, insert_fh)
 
-
-# def binaryModify():
-
-main()
+while True:
+    prog = int(
+        input(
+            """Which program would you like to run?
+    1 - Create New File
+    2 - Write to file
+    3 - Read
+    4 - Search
+    5 - Insert TODO
+    6 - Modify
+    Enter choice[1-5][0 to quit]:"""
+        )
+    )
+    if prog == 0:
+        exit()
+    elif prog == 1:
+        binaryNew()
+    elif prog == 2:
+        binaryWrite()
+    elif prog == 3:
+        binaryRead()
+    elif prog == 4:
+        binarySearch()
+    elif prog == 5:
+        binaryInsert()
+    elif prog == 6:
+        binaryModify()

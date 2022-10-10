@@ -2,20 +2,6 @@ stack=[]
 top=-1
 n=len(stack)
 
-def main():
-    while True:
-        op=int(input('>  '))
-        if op==0:
-            exit()
-        elif op==1:
-            push()
-        elif op==2:
-            pop()
-        elif op==3:
-            print(f'The Stack has {n} items. Currently on index {n-1}')
-        elif op==4:
-            help_menu()
-
 def help_menu():
     print('''What operation would you like to perform?
 [0] Quit
@@ -48,4 +34,16 @@ def pop():
         print(stack)
 
 help_menu()
-main()
+
+while True:
+    op=int(input('>  '))
+    if op==0:
+         exit()
+    elif op==1:
+        push()
+    elif op==2:
+        pop()
+    elif op==3:
+        print(f'The Stack has {n} items. Currently on index {n-1}')
+    elif op==4:
+        help_menu()

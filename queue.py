@@ -11,9 +11,7 @@ def help_menu():
 [3] Display Help''')
 
 def push():
-    global r
-    global f
-    global n
+    global r, f, n
     item=input("Enter item: ")
     if r>n:
         print("Overflow")
@@ -24,9 +22,7 @@ def push():
     print(queue)
 
 def pop():
-    global r
-    global f
-    global n
+    global r, f, n
     if f==-1:
         print("Underflow")
     else:

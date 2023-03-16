@@ -1,6 +1,6 @@
 queue=[]
 r=-1
-f=-1
+f=0
 n=len(queue)
 
 def help_menu():
@@ -12,24 +12,27 @@ def help_menu():
 
 def push():
     global r, f, n
+    n=len(queue)
     item=input("Enter item: ")
     if r>n:
         print("Overflow")
     else:
-        r=r+1
+        r+=1
         f=0
     queue.insert(r,item)
     print(queue)
 
 def pop():
     global r, f, n
-    if f==-1:
+    n=len(queue)
+    if r==-1:
         print("Underflow")
     else:
         queue.pop(f)
-        r=r-1
+        r-=1
         print(queue)
-        
+
+help_menu()
 while True:
     op=int(input('>  '))
     if op==0:
@@ -39,7 +42,3 @@ while True:
     elif op==2:
         pop()
     elif op==3:
-        help_menu()
-
-
-help_menu()
